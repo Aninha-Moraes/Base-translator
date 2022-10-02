@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/index.css">
+    <title>Base translator</title>
+</head>
+<body>
+    <div id="site_base">
+        <section id="basesBox" onclick="showBases()">
+            <h1>B</h1>
+        </section>
+        <aside>
+        </aside>
+        <section id="translator" onclick="hideBases()">
+            <canvas id="animationTarget"></canvas>
+            <div id="title">
+                <h1>Base translator</h1>
+                <p id="base_display">Base 2</p>
+            </div>
+            <section id="inputs_place">
+                <div id="entry_input_place" class="places_commons">
+                    <div id="warning_place" class="dynamic_messages_place"><p id="warning_message">Warning: unknow char in base 2</p></div>
+                    <textarea class="text_inputs" name="" id="entry_point" cols="30" rows="10"></textarea>
+                    <div id="entry_options">
+                        <button onclick="encodeText()">Encode</button>
+                        <button onclick="decodeText()">Decode</button>
+                    </div>
+                </div>
+
+                <div id="output_place" class="places_commons">
+                    <div id="copy_message_place" class="dynamic_messages_place"><p id="copy_message_text">Message copied to clipboard</p></div>
+                    <textarea class="text_inputs" name="" id="output_point" cols="30" rows="10"></textarea>
+                    <div id="entry_options">
+                        <button onclick="copyOutputText()">Copy</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+
+    <script src="./../javascript/functions.js"></script>
+    <script src="./../javascript/BubbleAnimation.js"></script>
+    <script src="./../javascript/index.js"></script>
+</body>
+</html>
